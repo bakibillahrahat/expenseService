@@ -38,7 +38,7 @@ public class Expense {
     private String userId;
     @JsonProperty(value = "amount")
     @NonNull
-    private BigDecimal amount;
+    private String amount;
     @JsonProperty(value = "merchant")
     private String merchant;
     @JsonProperty(value = "currency")

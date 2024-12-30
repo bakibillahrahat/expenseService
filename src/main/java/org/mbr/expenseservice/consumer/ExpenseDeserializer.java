@@ -14,14 +14,14 @@ public class ExpenseDeserializer implements Deserializer<ExpenseDTO> {
 
     @Override
     public ExpenseDTO deserialize(String topic, byte[] data) {
-        ObjectMapper objectMapper = new ObjectMapper();
-        ExpenseDTO expenseDto = null;
+        ObjectMapper mapper = new ObjectMapper();
+        ExpenseDTO expense = null;
         try{
-            expenseDto = objectMapper.readValue(topic, ExpenseDTO.class);
+            expense = mapper.readValue(data, ExpenseDTO.class);
         }catch(Exception e){
             e.printStackTrace();
         }
-        return expenseDto;
+        return expense;
     }
     
     @Override
